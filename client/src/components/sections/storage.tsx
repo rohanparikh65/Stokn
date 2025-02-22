@@ -16,6 +16,19 @@ export default function Storage() {
         <motion.div
           className="grid md:grid-cols-2 gap-12 items-center"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="rounded-lg overflow-hidden"
+            style={{
+              backgroundImage: 'url(https://images.unsplash.com/photo-1529333320936-e2193f4e3b32)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '500px'
+            }}
+          />
           <motion.div {...fadeInUp}>
             <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
               Stage 1: Secure Storage Solutions
@@ -26,7 +39,7 @@ export default function Storage() {
             </p>
             <div className="space-y-4">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -42,7 +55,7 @@ export default function Storage() {
                 </Card>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -59,19 +72,6 @@ export default function Storage() {
               </motion.div>
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="rounded-lg overflow-hidden"
-            style={{
-              backgroundImage: 'url(https://images.unsplash.com/photo-1529333320936-e2193f4e3b32)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '400px'
-            }}
-          />
         </motion.div>
       </div>
     </section>
