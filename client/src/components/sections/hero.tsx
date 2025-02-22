@@ -41,13 +41,13 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="container mx-auto px-4 pb-12 relative z-10"
+        className="container mx-auto px-4 pb-20 relative z-10"
       >
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             Revolutionizing Sneaker Trading
           </h2>
-          <p className="text-lg md:text-xl text-gray-300">
+          <p className="text-xl md:text-2xl text-gray-300">
             Welcome to the future of sneaker investment. Stokn transforms physical sneakers into digital assets,
             creating a seamless marketplace for collectors and investors alike.
           </p>
