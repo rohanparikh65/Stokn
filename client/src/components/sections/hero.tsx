@@ -1,20 +1,22 @@
 import { motion } from "framer-motion";
+import stLogo from '../assets/st.png';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-black to-black/80">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-pink-900/50 z-0" />
-
-      {/* Company Name */}
+    <section className="min-h-screen flex flex-col justify-between relative overflow-hidden bg-black">
+      {/* Company Logo */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-4 pt-12 relative z-10"
+        className="container mx-auto px-4 pt-12 relative z-10 flex justify-center"
       >
-        <h1 className="text-6xl md:text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-          STOKN
-        </h1>
+        <img
+  src="/asset/st.png"
+  alt="STOKN Logo"
+  className="object-contain h-32 md:h-48" // for example
+/>
+
       </motion.div>
 
       {/* Center Image */}
@@ -24,14 +26,14 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="relative z-10 mx-auto px-4 max-w-2xl"
       >
-        <div 
+        <div
           className="rounded-lg overflow-hidden shadow-2xl"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1542291026-7eec264c27ff)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',
-            height: '400px'
+            height: '400px',
           }}
         />
       </motion.div>
