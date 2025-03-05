@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import stLogo from '../assets/st.png';
+//import st from 'asset/st.png';  
 
 export default function Hero() {
   return (
@@ -12,11 +12,10 @@ export default function Hero() {
         className="container mx-auto px-4 pt-12 relative z-10 flex justify-center"
       >
         <img
-  src="/asset/st.png"
-  alt="STOKN Logo"
-  className="object-contain h-32 md:h-48" // for example
-/>
-
+          //src={st}
+          alt="STOKN Logo"
+          className="object-contain h-32 md:h-48"
+        />
       </motion.div>
 
       {/* Center Image */}
@@ -46,13 +45,14 @@ export default function Hero() {
         className="container mx-auto px-4 pb-20 relative z-10"
       >
         <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-            Revolutionizing Sneaker Trading
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-300">
-            Welcome to the future of sneaker investment. Stokn transforms physical sneakers into digital assets,
-            creating a seamless marketplace for collectors and investors alike.
-          </p>
+        <h2 className="text-4xl md:text-5xl press-start-2p-regular font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+  Revolutionizing Sneaker Trading
+</h2>
+
+
+<p className="text-xl font-body text-gray-300">
+Welcome to the future of sneaker investment. Stokn transforms physical sneakers into digital assets, creating a seamless marketplace for collectors and investors alike.
+</p>
         </div>
       </motion.div>
     </section>

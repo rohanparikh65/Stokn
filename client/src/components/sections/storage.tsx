@@ -19,7 +19,7 @@ export default function Storage() {
         viewport={{ once: true }}
         className="container mx-auto px-4 mb-12"
       >
-        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+        <h2 className="text-xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
           Stage 1: Secure Storage Solutions
         </h2>
       </motion.div>
