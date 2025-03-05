@@ -1,21 +1,35 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Package, Truck } from "lucide-react";
+import { useRef } from "react";
 
 export default function Buying() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-20 bg-black min-h-screen flex flex-col">
-      {/* Heading - Now Positioned Above the Image */}
+    <section ref={ref} className="py-20 bg-black min-h-screen flex flex-col">
+      {/* Typing Animation for Heading - Triggers on Scroll */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
         className="container mx-auto px-4 mb-12"
       >
-        <h2 className="text-xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left">
-          Stage 3: When You Buy
-        </h2>
+        {isInView && (
+          <TypeAnimation
+            sequence={[
+              "Stage 4: When You Buy", // Type the heading
+              1000, // Pause for 1 second
+            ]}
+            wrapper="h2"
+            className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
+            speed={50} // Typing speed
+            repeat={0} // Only play animation once
+            cursor={false} // Remove blinking cursor after typing
+          />
+        )}
       </motion.div>
 
       {/* Content Section (Image + Text) */}

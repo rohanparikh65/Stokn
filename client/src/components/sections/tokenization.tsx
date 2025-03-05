@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import { Card, CardContent } from "@/components/ui/card";
+import { useRef } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -9,22 +11,36 @@ const fadeInUp = {
 };
 
 export default function Tokenization() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-b from-black to-purple-900/20">
+    <section ref={ref} className="min-h-screen flex items-center bg-gradient-to-b from-black to-purple-900/20">
       <div className="container mx-auto px-4">
+        {/* Typing Animation for Heading - Only Triggers When in View */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-            Stage 2: Digital Transformation
-          </h2>
+          {isInView && (
+            <TypeAnimation
+              sequence={[
+                "Stage 2: Digital Transformation", // Type this heading
+                1000, // Pause for 1 second
+              ]}
+              wrapper="h2"
+              className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
+              speed={50} // Typing speed
+              repeat={0} // Ensures animation plays only once
+              cursor={false} // Remove blinking cursor after typing
+            />
+          )}
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -38,6 +54,8 @@ export default function Tokenization() {
               height: '400px'
             }}
           />
+          
+          {/* Text Content */}
           <motion.div {...fadeInUp}>
             <Card className="bg-purple-900/20 border-purple-500/20">
               <CardContent className="p-6">

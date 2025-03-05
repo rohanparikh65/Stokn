@@ -7,13 +7,25 @@ import InterestForm from "@/components/sections/interest-form";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Hero />
-      <Storage />
-      <Tokenization />
-      <Buying />
-      <Investing />
-      <InterestForm />
-    </div>
+    <main className="h-screen overflow-y-scroll snap-y snap-mandatory bg-black text-white">
+      <div className="snap-start h-screen">
+        <Hero />
+      </div>
+      <div className="snap-start h-screen">
+        <Storage />
+      </div>
+      <div className="snap-start h-screen">
+        <Tokenization />
+      </div>
+      <div className="snap-start h-screen">
+        <Investing />
+      </div>
+      <div className="snap-start h-screen">
+        <Buying />
+      </div>
+      <div className="snap-start h-screen">
+        <InterestForm />
+      </div>
+    </main>
   );
 }
