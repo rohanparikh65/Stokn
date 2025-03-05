@@ -4,9 +4,24 @@ import { Globe, Users, Warehouse } from "lucide-react";
 
 export default function Investing() {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-purple-900/20 min-h-screen flex items-center">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="py-20 bg-gradient-to-b from-black to-purple-900/20 min-h-screen flex flex-col">
+      {/* Heading - Moved Above the Image */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="container mx-auto px-4 mb-12"
+      >
+        <h2 className="text-xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left">
+          Stage 4: When You Invest
+        </h2>
+      </motion.div>
+
+      {/* Content Section (Image + Text) */}
+      <div className="container mx-auto px-4 flex-grow flex items-center">
+        <motion.div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -21,16 +36,13 @@ export default function Investing() {
             }}
           />
 
+          {/* Text Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-              When You Invest
-            </h2>
-
             <div className="space-y-6">
               <Card className="bg-purple-900/20 border-purple-500/20">
                 <CardContent className="p-6">
@@ -75,7 +87,7 @@ export default function Investing() {
               </Card>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
