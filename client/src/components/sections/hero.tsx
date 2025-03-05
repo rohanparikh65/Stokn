@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-//import st from 'asset/st.png';  
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-between relative overflow-hidden bg-black">
-      {/* Company Logo */}
+      {/* Company Logo - Commented Out for Now */}
+      {/*
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -12,11 +13,12 @@ export default function Hero() {
         className="container mx-auto px-4 pt-12 relative z-10 flex justify-center"
       >
         <img
-          //src={st}
+          src={stLogo}
           alt="STOKN Logo"
           className="object-contain h-32 md:h-48"
         />
       </motion.div>
+      */}
 
       {/* Center Image */}
       <motion.div
@@ -37,24 +39,44 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Bottom Text */}
+      {/* Typing Animation for Hero Text - Left Aligned */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="container mx-auto px-4 pb-20 relative z-10"
+        className="container mx-auto px-4 pb-20 relative z-10 text-left"
       >
         <div className="max-w-3xl">
-        <h2 className="text-4xl md:text-5xl press-start-2p-regular font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-  Revolutionizing Sneaker Trading
-</h2>
+          {/* Animated Heading (Left-aligned) */}
+          <TypeAnimation
+  sequence={[
+    "Revolutionizing Sneaker Trading", // Type the full phrase
+    1000, // Pause for 1 second
+  ]}
+  wrapper="h2"
+  className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left max-w-full"
+  speed={50} // Typing speed
+  repeat={0} // Ensures animation plays only once
+  cursor={true} // Keep cursor for heading
+/>
 
 
-<p className="text-xl font-body text-gray-300">
-Welcome to the future of sneaker investment. Stokn transforms physical sneakers into digital assets, creating a seamless marketplace for collectors and investors alike.
-</p>
+          {/* Animated Subtext (Delayed Start, No Blinking Cursor) */}
+          <TypeAnimation
+            sequence={[
+              2500, // Wait for the heading to finish typing before starting
+              "Welcome to the future of sneaker investment. Stokn transforms physical sneakers into digital assets, creating a seamless marketplace for collectors and investors alike.",
+              1000 // Pause after typing
+            ]}
+            wrapper="p"
+            className="text-xl md:text-2xl font-body text-gray-300 mt-4 text-left"
+            speed={90} // Adjust typing speed
+            repeat={0} // Only play animation once
+            cursor={false} // Remove cursor for body text
+          />
         </div>
       </motion.div>
     </section>
   );
 }
+
