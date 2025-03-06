@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Globe, Users, Warehouse } from "lucide-react";
+import { Warehouse, Users } from "lucide-react";
 import { useRef } from "react";
 
 export default function Investing() {
@@ -9,32 +9,28 @@ export default function Investing() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-black to-purple-900/20 min-h-screen flex flex-col">
-      {/* Typing Animation for Heading - Triggers on Scroll */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 mb-12"
-      >
-        {isInView && (
-          <TypeAnimation
-            sequence={[
-              "Stage 3: When You Invest", // Type the heading
-              1000, // Pause for 1 second
-            ]}
-            wrapper="h2"
-            className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
-            speed={50} // Typing speed
-            repeat={0} // Only play animation once
-            cursor={false} // Remove blinking cursor after typing
-          />
-        )}
-      </motion.div>
+    <section ref={ref} className="min-h-screen flex items-center bg-black">
+      <div className="container mx-auto px-4">
+        {/* Typing Animation for Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          {isInView && (
+            <TypeAnimation
+              sequence={["Stage 3: Strategic Sneaker Investing", 1000]}
+              wrapper="h2"
+              className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
+              speed={50}
+              repeat={0}
+              cursor={false}
+            />
+          )}
+        </motion.div>
 
-      {/* Content Section (Image + Text) */}
-      <div className="container mx-auto px-4 flex-grow flex items-center">
-        <motion.div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -46,62 +42,48 @@ export default function Investing() {
               backgroundImage: 'url(https://images.unsplash.com/photo-1587563871167-1ee9c731aefb)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              height: '500px'
+              height: '400px',
             }}
           />
 
-          {/* Text Section */}
+          {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="space-y-6">
               <Card className="bg-purple-900/20 border-purple-500/20">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Warehouse className="h-8 w-8 text-purple-400 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-purple-400">Digital Ownership</h3>
-                      <p className="text-gray-300">
-                        Gain digital ownership of verified sneakers without worrying about shipping, storage, or maintenance fees. Your investment is securely stored in our state-of-the-art vaults.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
+  <CardContent className="p-6 flex items-start gap-4">
+    <Warehouse className="text-purple-400 h-7 w-7" />
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold text-purple-400">
+        Scale Your Assets
+      </h3>
+      <p className="text-base text-gray-400">
+        Invest in sneakers without the hassle of managing inventory, employees, or a brand—focus purely on sourcing and scaling.
+      </p>
+    </div>
+  </CardContent>
               </Card>
 
+            <div className="mt-6 space-y-6">
               <Card className="bg-pink-900/20 border-pink-500/20">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Globe className="h-8 w-8 text-pink-400 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-pink-400">Global Marketplace</h3>
-                      <p className="text-gray-300">
-                        Access a worldwide network of collectors and buyers. Trade your digital assets anywhere in the world, opening up unlimited opportunities for future sales.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-purple-900/20 border-purple-500/20">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <Users className="h-8 w-8 text-purple-400 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-purple-400">Community Access</h3>
-                      <p className="text-gray-300">
-                        Join an exclusive community of sneaker enthusiasts and investors. Collaborate, trade, and grow your investment portfolio within our trusted network.
-                      </p>
-                    </div>
+                <CardContent className="p-6 flex items-start gap-4">
+                  <Users className="text-pink-400 h-7 w-7" />
+                  <div>
+                    <h3 className="text-lg md:text-xl font-semibold text-pink-400">
+                      Global Reach & Store Access
+                    </h3>
+                    <p className="text-base text-gray-400">
+                      Your sneaker investment gets exposure to a worldwide network and the chance to be placed in partner stores for both physical & online sales.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
