@@ -20,7 +20,7 @@ export default function Tokenization() {
         >
           {isInView && (
             <TypeAnimation
-              sequence={["Stage 2: Digital Authentication & Marketplace", 1000]}
+              sequence={["Stage 2: Digitalalise physical asset", 1000]}
               wrapper="h2"
               className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
               speed={50}

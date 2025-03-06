@@ -20,7 +20,7 @@ export default function Storage() {
         >
           {isInView && (
             <TypeAnimation
-              sequence={["Stage 1: Secure & Verified Storage", 1000]}
+              sequence={["Stage 1: Storage solution", 1000]}
               wrapper="h2"
               className="text-lg md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 text-left"
               speed={50}
