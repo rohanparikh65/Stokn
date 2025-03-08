@@ -11,9 +11,18 @@
 
   body {
     @apply font-body antialiased bg-background text-foreground;
-  }
+    background: linear-gradient(180deg, #0C1821 20%, black 80%);  }
 
   h1, h2, h3 {
     @apply font-heading;
   }
+
+  .fixed-image {
+    width: 100%;
+    max-width: 500px; /* Adjust based on your design */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures the image doesn’t stretch */
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  
 }

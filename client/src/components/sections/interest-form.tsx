@@ -43,7 +43,7 @@ export default function InterestForm() {
   });
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20">
       <div className="container mx-auto px-4 max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,10 +52,12 @@ export default function InterestForm() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+     <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             Join the Future of Sneaker Trading
-          </h2>
-          <p className="text-gray-300">
+          </h2> 
+
+
+          <p className="text-xl text-gray-400">
             Interested in being part of the revolution? Let us know and we'll keep you updated.
           </p>
         </motion.div>
