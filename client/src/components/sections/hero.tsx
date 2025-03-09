@@ -13,23 +13,20 @@ export default function Hero() {
       
       {/* Logo Positioned at the Top Center */}
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="absolute top-6 left-[47%] md:left-[45%] lg:left-[45%] transform -translate-x-1/2 w-28 md:w-36 lg:w-40" 
-      >
-        <img src={subLogo} alt="Stokn Logo" className="w-full h-auto object-contain" />
-      </motion.div>
+  initial={{ opacity: 0 }} // Only fade-in
+  animate={{ opacity: 1 }} // No movement
+  transition={{ duration: 0.8 }}
+  className="absolute top-6 left-[47%] md:left-[45%] lg:left-[45%] transform -translate-x-1/2 w-28 md:w-36 lg:w-40" 
+>
+  <img src={subLogo} alt="Stokn Logo" />
+</motion.div>
+
+
+
+
 
       {/* 🌍 Globe Positioned in Hero */}
-      <motion.img
-        src={globeImage}
-        alt="Digital Globe"
-        className="absolute right-[-60%] md:right-[-50%] lg:right-[-40%] top-[-10%] h-[120%] md:h-[130%] lg:h-[140%] max-w-none object-cover pointer-events-none"
-        initial={{ opacity: 0, scale: 1.2, x: 50 }}
-        animate={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 1 }}
-      />
+      
 
       {/* Bottom Left Text & Heading (LEFT-ALIGNED) */}
       <div className="absolute bottom-10 left-5 md:left-10 lg:left-16 max-w-5xl text-left z-10">
@@ -60,7 +57,7 @@ export default function Hero() {
             ]}
             wrapper="p"
             className="text-lg md:text-xl lg:text-2xl font-body text-gray-300"
-            speed={99}
+            speed={75}
             repeat={0}
             cursor={false}
           />

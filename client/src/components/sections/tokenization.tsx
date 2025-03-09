@@ -2,23 +2,14 @@ import { motion, useInView } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Globe } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
-
-// Image paths
-import physicalShoe from'@/asset/shoe.jpeg'
-import nftShoe from '@/asset/nft.jpeg'
+// Image path
+import physicalShoe from '@/asset/tokenise.png';
 
 export default function Tokenization() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [showNFT, setShowNFT] = useState(false);
-
-  useEffect(() => {
-    if (isInView) {
-      setTimeout(() => setShowNFT(true), 1000); // Delay before NFT appears
-    }
-  }, [isInView]);
 
   return (
     <section ref={ref} className="min-h-screen flex items-center">
@@ -43,23 +34,15 @@ export default function Tokenization() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image Transition: Physical Shoe to NFT */}
+          {/* Static Image */}
           <div className="relative w-full h-96 mx-auto overflow-hidden">
             <motion.img
               src={physicalShoe}
               alt="Physical Shoe"
               className="absolute w-full h-full object-cover rounded-lg"
-              initial={{ opacity: 1, scale: 1 }}
-              animate={{ opacity: showNFT ? 0 : 1, scale: showNFT ? 0.97 : 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-            />
-            <motion.img
-              src={nftShoe}
-              alt="NFT Shoe"
-              className="absolute w-full h-full object-cover rounded-lg"
-              initial={{ opacity: 0, scale: 1.03 }}
-              animate={{ opacity: showNFT ? 1 : 0, scale: showNFT ? 1 : 1.03 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
             />
           </div>
 

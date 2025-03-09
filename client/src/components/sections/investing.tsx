@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Warehouse, Users } from "lucide-react";
 import { useRef } from "react";
 
-import NFT from '@/asset/nft.jpeg'; // Imported NFT Image
+import NFT from '@/asset/investing.png'; // Imported NFT Image
 
 export default function Investing() {
   const ref = useRef(null);

@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Package, Truck } from "lucide-react";
 import { useRef } from "react";
 
-import shoe from '@/asset/shoe.jpeg'; // Imported Shoe Image
+import shoe from '@/asset/buying.png'; // Imported Shoe Image
 
 export default function Buying() {
   const ref = useRef(null);
@@ -44,7 +44,7 @@ export default function Buying() {
             <img 
               src={shoe} 
               alt="Shoe Image" 
-              className="w-full h-full object-cover rounded-lg shadow-lg"
+              className="w-full h-full object-cover  rounded-lg shadow-lg"
             />
           </motion.div>
 
