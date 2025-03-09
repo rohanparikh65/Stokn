@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
+import Navbar from "@/components/sections/navbar"; // Import Navbar
 import Hero from "@/components/sections/hero";
 import Storage from "@/components/sections/storage";
 import Tokenization from "@/components/sections/tokenization";
 import Buying from "@/components/sections/buying";
 import Investing from "@/components/sections/investing";
 import InterestForm from "@/components/sections/interest-form";
-import globeImage from "@/asset/globe.png"; // ✅ Ensure the image exists
+import globeImage from "@/asset/globe.png";
 
 export default function Home() {
   return (
     <main className="relative h-screen overflow-y-scroll snap-y snap-mandatory text-white">
       
+      <Navbar /> {/* ✅ Add Navbar Here */}
+
       {/* 🌍 Globe Positioned in Home.tsx (Fixed) */}
       <motion.img
         src={globeImage}

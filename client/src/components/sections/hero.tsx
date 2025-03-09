@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useRef } from "react";
 import subLogo from '@/asset/sub_logo.png'; // Ensure correct path
-import globeImage from '@/asset/globe.png'; // Ensure correct path
 
 export default function Hero() {
   const ref = useRef(null);
@@ -11,15 +10,7 @@ export default function Hero() {
   return (
     <section ref={ref} className="min-h-screen flex flex-col justify-between relative overflow-hidden px-4">
       
-      {/* Logo Positioned at the Top Center */}
-      <motion.div
-  initial={{ opacity: 0 }} // Only fade-in
-  animate={{ opacity: 1 }} // No movement
-  transition={{ duration: 0.8 }}
-  className="absolute top-6 left-[47%] md:left-[45%] lg:left-[45%] transform -translate-x-1/2 w-28 md:w-36 lg:w-40" 
->
-  <img src={subLogo} alt="Stokn Logo" />
-</motion.div>
+      
 
 
 
