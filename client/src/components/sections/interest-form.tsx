@@ -29,15 +29,19 @@ export default function InterestForm() {
         name: data.name.trim(),
         email: data.email.trim(),
         message: data.message?.trim() || "",
+        api_key: "STOKNIT12345", // ✅ Ensure API Key is included
       };
-
-      console.log("✅ Sending Request Data:", requestData); // Debugging log
-
+      
+      console.log("📤 Sending Request Data:", requestData);
+      
       const response = await fetch("/api/interest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestData),
       });
+      
+      const responseBody = await response.json();
+      console.log("✅ API Response:", responseBody);
 
       if (!response.ok) {
         const errorResponse = await response.json();

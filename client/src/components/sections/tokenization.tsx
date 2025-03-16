@@ -81,7 +81,7 @@ export default function Tokenization() {
                   <Globe className="text-pink-400 h-6 md:h-7 w-6 md:w-7" />
                   <div>
                     <h3 className="text-md md:text-xl font-semibold text-pink-400">
-                      Instant Marketplace Listing
+                      Instant Listing
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
                       The NFT-backed sneaker is instantly listed on our marketplace, making it accessible to a global audience without physical movement.
