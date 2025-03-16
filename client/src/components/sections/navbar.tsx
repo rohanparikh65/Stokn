@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0C1821]">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         
         {/* 🍔 Three-dot Menu (Left Side) */}

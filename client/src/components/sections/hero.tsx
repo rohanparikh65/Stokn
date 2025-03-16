@@ -9,12 +9,6 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="min-h-screen flex flex-col justify-between relative overflow-hidden px-4">
-      
-      
-
-
-
-
 
       {/* 🌍 Globe Positioned in Hero */}
       
@@ -30,7 +24,7 @@ export default function Hero() {
               1000, 
             ]}
             wrapper="h1"
-            className="text-2xl md:text-3xl lg:text-3xl font-heading font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
+            className="text-lg md:text-3xl lg:text-3xl font-heading font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400"
             speed={50}
             repeat={0}
             cursor={true}
