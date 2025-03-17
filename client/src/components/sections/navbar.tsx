@@ -7,21 +7,25 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0C1821]">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
         
         {/* 🍔 Three-dot Menu (Left Side) */}
-        <button onClick={() => setIsOpen(!isOpen)} className="text-white md:hidden">
+        {/* <button onClick={() => setIsOpen(!isOpen)} className="text-white md:hidden">
           <Menu size={24} />
-        </button>
+        </button> */}
 
-        {/* 🔹 STOKN Logo (Center) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={stoknLogo} alt="STOKN Logo" className="h-10 md:h-12 object-contain" />
+        {/* 🔹 STOKN Logo (Centered with padding) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 pt-4">
+          <img 
+            src={stoknLogo} 
+            alt="STOKN Logo" 
+            className="h-24 md:h-32 max-w-[180px] md:max-w-[240px] w-auto object-contain"
+          />
         </div>
 
         {/* 🔹 Desktop Navigation Links */}
-        <div className="hidden md:flex space-x-6">
+        {/* <div className="hidden md:flex space-x-6">
           <Link href="/" className="text-white cursor-pointer">
             Home
           </Link>
@@ -29,11 +33,11 @@ export default function Navbar() {
             Contact
           </Link>
           
-        </div>
+        </div> */}
       </div>
 
       {/* 📜 Mobile Menu (Opens on Click) */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="absolute left-4 top-14 bg-black p-4 rounded-lg shadow-lg">
           <Link href="/" className="block text-white py-2 cursor-pointer">
             Home
@@ -45,7 +49,7 @@ export default function Navbar() {
             Meet the Team
           </Link>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }

@@ -18,7 +18,7 @@ export default function Home() {
       <motion.img
         src={globeImage}
         alt="Digital Globe"
-        className="absolute right-[-60%] md:right-[-50%] lg:right-[-40%] top-[-10%] h-[120%] md:h-[130%] lg:h-[140%] max-w-none object-cover pointer-events-none -z-10"
+        className="absolute sm:right-[-99%] md:right-[-50%] lg:right-[-40%] top-[-10%] h-[120%] md:h-[130%] lg:h-[140%] max-w-none object-cover pointer-events-none -z-10"
         initial={{ opacity: 0, scale: 1.2, x: 50 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1 }}
