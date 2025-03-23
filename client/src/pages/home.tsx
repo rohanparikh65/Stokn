@@ -10,7 +10,7 @@ import globeImage from "@/asset/globe.png";
 
 export default function Home() {
   return (
-    <main className="relative h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory text-white">
+    <main className="relative h-screen overflow-x-hidden overflow-y-scroll snap-y snap-mandatory text-white">
       
       <Navbar /> {/* ✅ Add Navbar Here */}
 

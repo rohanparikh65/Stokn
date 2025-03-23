@@ -180,8 +180,7 @@ export default function Investing() {
                       Scale Your Assets
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      Invest in sneakers without the hassle of managing inventory, employees, or a brand—focus purely on sourcing and scaling.
-                    </p>
+                    Invest in sneakers without managing inventory, staff, or a brand—just source and scale                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -191,10 +190,9 @@ export default function Investing() {
                   <Users className="text-pink-400 h-5 md:h-7 w-5 md:w-7" />
                   <div>
                     <h3 className="text-sm md:text-xl font-semibold text-pink-400">
-                      Global Reach & Store Access
-                    </h3>
+                    Global Sneaker Grid                             </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      Your sneaker investment gets exposure to a worldwide network and the chance to be placed in partner stores for both physical & online sales.
+                    Tap into a worldwide network with seamless access to retail and digital storefronts.
                     </p>
                   </div>
                 </CardContent>

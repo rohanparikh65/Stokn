@@ -270,7 +270,7 @@ export default function Buying() {
                   <Package className="text-purple-400 h-5 md:h-7 w-5 md:w-7" />
                   <div>
                     <h3 className="text-sm md:text-xl font-semibold text-purple-400">
-                      Instant NFT Redemption
+                      Instant Redemption
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
                       Upon purchase, the NFT is redeemed immediately, verifying ownership and initiating fulfillment.

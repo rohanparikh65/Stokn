@@ -186,10 +186,10 @@ export default function Tokenization() {
                   <CheckCircle className="text-purple-400 h-5 md:h-7 w-5 md:w-7" />
                   <div>
                     <h3 className="text-sm md:text-xl font-semibold text-purple-400">
-                      Authenticity-Backed NFTs
+                    Verified NFTs
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      Every authenticated sneaker is given a unique digital twin, ensuring a secure and transparent ownership record.
+                      Every authenticated sneaker is given a digital twin, ensuring a secure and transparent ownership record.
                     </p>
                   </div>
                 </CardContent>
@@ -203,7 +203,7 @@ export default function Tokenization() {
                       Instant Listing
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      The NFT-backed sneaker is instantly listed on our marketplace, making it accessible to a global audience without physical movement.
+                      The verified NFT is instantly listed on our marketplace, making it accessible to a global audience without physical movement.
                     </p>
                   </div>
                 </CardContent>
