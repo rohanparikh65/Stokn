@@ -14,7 +14,7 @@ export default function Storage() {
   return (
     <section
       ref={ref}
-      className={`w-full overflow-x-hidden px-4 bg-gradient-to-b from-[#0C1821] to-[#0C1821] md:from-[#0C1821] md:to-black ${
+      className={`w-full overflow-x-hidden px-4 bg-gradient-to-b from-[#0C1821] to-black ${
         isMobile ? "" : "flex items-center"
       } scroll-pb-32`}
       style={{
