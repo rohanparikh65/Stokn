@@ -79,7 +79,7 @@ export default function Investing() {
                       Global Reach & Store Access
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      Your sneaker investment gets exposure to a worldwide network and the chance to be placed in partner stores for both physical & online sales.
+                      Your sneaker investment gets exposure to a worldwide network and the chance to be placed in partner stores for both physical & online presence.
                     </p>
                   </div>
                 </CardContent>

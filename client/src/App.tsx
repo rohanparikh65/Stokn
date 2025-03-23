@@ -6,6 +6,8 @@ import Home from "@/pages/home";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import Navbar from "@/components/sections/navbar"; // ✅ Add Navbar
+import { Suspense } from 'react';
+import Loading from '@/components/ui/loading';
 
 function Router() {
   return (
@@ -21,9 +23,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Navbar /> {/* ✅ Ensure Navbar is added */}
-      <Router />
-      <Toaster />
+      <Suspense fallback={<Loading />}>
+        <Navbar />
+        <Router />
+        <Toaster />
+      </Suspense>
     </QueryClientProvider>
   );
 }

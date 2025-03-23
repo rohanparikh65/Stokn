@@ -8,19 +8,19 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#0C1821]">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center relative">
         
         {/* 🍔 Three-dot Menu (Left Side) */}
         {/* <button onClick={() => setIsOpen(!isOpen)} className="text-white md:hidden">
           <Menu size={24} />
         </button> */}
 
-        {/* 🔹 STOKN Logo (Centered with padding) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 pt-4">
+        {/* 🔹 STOKN Logo (Centered with responsive padding) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 pt-2 sm:pt-6">
           <img 
             src={stoknLogo} 
             alt="STOKN Logo" 
-            className="h-24 md:h-32 max-w-[180px] md:max-w-[240px] w-auto object-contain"
+            className="h-16 sm:h-24 md:h-32 max-w-[140px] sm:max-w-[180px] md:max-w-[240px] w-auto object-contain"
           />
         </div>
 
