@@ -273,7 +273,7 @@ export default function Buying() {
                       Instant Redemption
                     </h3>
                     <p className="text-sm md:text-xl text-gray-400">
-                      Upon purchase, the NFT is redeemed immediately, verifying ownership and initiating fulfillment.
+                      Upon purchase, the NFT is redeemed instantly, verifying ownership and initiating fulfillment.
                     </p>
                   </div>
                 </CardContent>
