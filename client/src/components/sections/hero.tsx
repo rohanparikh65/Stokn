@@ -84,7 +84,7 @@ export default function Hero() {
             wrapper="h1"
             className={`
               font-heading font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400
-              ${isMobile ? "text-xl leading-tight text-center" : "text-3xl lg:text-4xl text-left"}
+              ${isMobile ? "text-xl leading-tight text-left" : "text-3xl lg:text-4xl text-left"}
             `}
             speed={50}
             repeat={0}
@@ -103,7 +103,7 @@ export default function Hero() {
             wrapper="p"
             className={`
               text-gray-300 font-body
-              ${isMobile ? "text-sm leading-snug text-center" : "text-xl lg:text-2xl text-left"}
+              ${isMobile ? "text-sm leading-snug text-left" : "text-xl lg:text-2xl text-left"}
             `}
             speed={75}
             repeat={0}

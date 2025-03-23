@@ -206,7 +206,7 @@ export default function Buying() {
         isMobile ? "" : "flex items-center"
       } scroll-pb-32`}
       style={{
-        paddingTop: isMobile ? "2.5rem" : "5rem",
+        paddingTop: isMobile ? "3rem" : "5rem",
         paddingBottom: isMobile
           ? "calc(5rem + env(safe-area-inset-bottom))"
           : "6rem",
